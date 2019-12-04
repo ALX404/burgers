@@ -189,7 +189,8 @@ audio:not([controls]) {
    * Remove the border on images inside links in IE 10-.
    */
 img {
-  border-style: none; }
+  border-style: none;
+  max-width: 100%; }
 
 /**
    * Hide the overflow in IE.
@@ -456,7 +457,7 @@ a {
   overflow: hidden; }
 
 .container {
-  width: 940px;
+  max-width: 940px;
   margin: 0 auto; }
 
 .section {
@@ -526,6 +527,7 @@ button {
   position: absolute;
   width: 100%;
   padding-top: 12px;
+  top: 0;
   z-index: 1; }
 
 .header__container {
@@ -542,13 +544,20 @@ button {
 .header__wrapper {
   margin-left: 15px; }
 
-.nav_list {
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 .nav__item {
   font-family: 'Ubuntu', Helvetica, sans-serif;
@@ -588,11 +597,12 @@ button {
   text-decoration: none;
   color: #fff;
   font-size: 13px;
-  font-weight: 500; }
+  font-weight: 500;
+  display: inline-block; }
 
 .promo {
   height: 100vh;
-  background-image: url(./img/bg/main.jpg);
+  background-image: url(../img/bg/main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -612,11 +622,11 @@ button {
   -ms-flex-align: center;
   align-items: center; }
 
-.promo__title1 {
+.promo__title {
   margin-left: 20px;
   margin-top: 60px; }
 
-.promo__title2 {
+.promo__subtitle {
   font-family: 'Lifehack-Medium';
   margin-top: 20px;
   font-size: 56px;
@@ -626,7 +636,9 @@ button {
 .promo__scroll-btn {
   width: 29px;
   height: 14px;
-  background-image: url(/img/icons/arrow-scroll.svg);
+  background-image: url(../img/icons/arrow-scroll.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   display: block;
   position: absolute;
   bottom: 40px;
@@ -706,6 +718,8 @@ button {
   position: relative; }
   .fixed-menu__dot--active {
     border-color: #fff; }
+  .fixed-menu__dot:hover {
+    border-color: #fff; }
   .fixed-menu__dot:before {
     content: '';
     width: 6px;
@@ -718,10 +732,6 @@ button {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-
-.container {
-  width: 943px;
-  margin: 0 auto; }
 
 .order {
   position: relative;
@@ -791,43 +801,38 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
 
 .section {
   height: 100vh;
   min-height: 650px; }
 
-.container {
-  width: 943px;
-  margin: 0 auto; }
-
-.title-centered {
+.title_centered {
   text-align: center; }
 
-.title-color-black {
+.title_color_black {
   color: #2f3234; }
 
 .thebest__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 55px;
-  padding-right: 60px; }
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-left: 5%; }
 
-.thebest__title:nth-child(1) {
+.thebest__title {
+  width: 33.3%;
+  text-align: center; }
+
+.thebest__title:first-child {
   padding-left: 0; }
-
-.thebest__svg {
-  padding-left: 30%; }
-
-.hand {
-  padding-left: 15%; }
 
 .thebest__item {
   font-family: 'Lifehack-Medium';
-  text-align: center;
   color: #2f3234;
   font-size: 24px;
   font-weight: 500;
@@ -839,18 +844,16 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;
   color: #2f3234;
   font-size: 14px;
   font-weight: 300;
   line-height: 24.02px;
-  padding-top: 22px; }
+  padding-top: 10px; }
 
 * {
   margin: 0;

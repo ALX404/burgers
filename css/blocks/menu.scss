@@ -18,6 +18,10 @@
         border-color: $white;
     }
 
+    &:hover {
+        border-color: $white;
+    }
+
     &:before {
         content: '';
         width: 6px;

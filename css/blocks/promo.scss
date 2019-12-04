@@ -1,6 +1,6 @@
 .promo {
     height: 100vh;
-    background-image: url(./img/bg/main.jpg);
+    background-image: url(../img/bg/main.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -17,12 +17,12 @@
     align-items: center;
 }
 
-.promo__title1 {
+.promo__title {
     margin-left: 20px;
     margin-top: 60px;
 }
 
-.promo__title2 {
+.promo__subtitle {
     @include lifehack();
     margin-top: 20px;
     font-size: 56px;
@@ -33,7 +33,9 @@
 .promo__scroll-btn {
     width: 29px;
     height: 14px;
-    background-image: url(/img/icons/arrow-scroll.svg);
+    background-image: url(../img/icons/arrow-scroll.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
     display: block;
     position: absolute;
     bottom: 40px;
